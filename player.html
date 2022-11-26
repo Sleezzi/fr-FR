@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title">Player</title>
+    <link rel="stylesheet" href="https://sleezzi.github.io/css/Player.css">
+    <link rel="stylesheet" href="https://sleezzi.github.io/css/style.css">
+    <link rel="icon" href="https://sleezzi.github.io/img/audio.png">
+</head>
+<body id="body">
+    <div class="background">
+        <div class="particle" id="particle1"></div>
+        <div class="particle" id="particle2"></div>
+        <div class="particle" id="particle3"></div>
+    </div>
+    <div id="menu">
+        <a href="./settings.html" id="settings"><img src="https://sleezzi.github.io/img/settings.png" target="_blank" alt="Settings"></a>
+    </div>
+    <div id="main">
+        <input type="file" accept="audio/mp3" max="1" id="audioSelect">
+        <div id="player">
+            <button type="submit" id="Play">Play</button>
+            <div class="progress">
+                <input class="range" id="progress-range" type="range" min="0" value="0">
+                <progress min="0" class="progress" id="progress-bar" value="0"></progress>
+            </div>
+            <div class="progress-value">
+                <p id="progressValue">0</p>
+            </div>
+            <div class="options">
+                <div id="loop">
+                    <img src="https://sleezzi.github.io/img/loopOff.png" alt="Loop" id="loop-img" class="loop-img">
+                </div>
+            </div>
+            <div id="volume">
+                <img src="https://sleezzi.github.io/img/audio.png" alt="Volume" id="volume-img">
+                <input type="range" min="0" max="100" id="volume-range" value="100">
+                <p id="volume-value"></p>
+            </div>
+        </div>
+    </div>
+    <audio style="display: flex;" id="audio">
+        <source type="audio/mpeg">
+    </audio>
+    <script src="https://sleezzi.github.io/js/player.js"></script>
+    <script src="https://sleezzi.github.io/js/theme.js"></script>
+</body>
+</html>
